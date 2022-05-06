@@ -1,10 +1,16 @@
 ﻿function Add-MyNewVpn() 
 {
+    # 名称
     $VpnName="VPNName"
+    # 连接地址
     $VpnAddr="vpnaddr.local"
+    # 预共享密钥
     $L2tpPsk="password"
+    # DNS 服务器
     $Dns="192.168.1.1"
+    # DNS 后缀匹配此后缀的走指定的 DNS 服务器解析
     $DnsSuffix="internal.local"
+    # 连接时添加到路由表，访问这些地址时走vpn
     $InternalIpAddress=@('10.10.10.0/24')
     
     $VpnOpts=@{
